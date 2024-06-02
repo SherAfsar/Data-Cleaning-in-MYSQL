@@ -2,10 +2,12 @@
 This GitHub repository contains a comprehensive data cleaning project using MySQL. The project aims to prepare raw data for analysis through a series of systematic steps. Initially, the database is set up, and raw data is imported. Duplicate records are identified and removed using row numbers and Common Table Expressions (CTEs).The data is then standardized: leading blank spaces in the company column are removed, values in the industry and country columns are corrected, and the date column is converted from text to a proper date format. Null and blank values are addressed by replacing blanks with nulls and filling missing industry values based on matching company and location information.Finally, rows with null values in critical columns are deleted, and unnecessary columns, such as the temporary row number column used for duplicate removal, are dropped. This project ensures the data is clean, consistent, and ready for further analysis or application.
 
 ## Dataset
-The dataset used in this Project is uploaded. This file can be found in above section.
+The original dataset contains 2362 rows and includes columns such as 'Company', 'Location', 'Industry', 'Total Laid Off', 'Percentage Laid Off', 'Date', 'Stage', 'Country', and 'Funds Raised (Millions)'. After cleaning the dataset, the updated dataset cut down to 1995 rows and the number of columns remained consistent. The dataset is uploaded and can be found here:
+
+https://github.com/SherAfsar/Data-Cleaning-in-MYSQL/blob/main/layoffs.csv
 
 ## MYSQL Files
-The MYSQL files is uploaded as well. It can be found in above section.
+The MYSQL files is uploaded as well. It can be found here https://github.com/SherAfsar/Data-Cleaning-in-MYSQL/blob/main/Data%20Cleaning.sql
 
 ## Data Cleaning Steps
 The following steps have been followed to clean the the dataset in MYSQL.
