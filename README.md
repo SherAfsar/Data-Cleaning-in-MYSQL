@@ -6,8 +6,8 @@ The original dataset contains 2362 rows and includes columns such as 'Company', 
 
 https://github.com/SherAfsar/Data-Cleaning-in-MYSQL/blob/main/layoffs.csv
 
-## MYSQL Files
-The MYSQL files is uploaded as well. It can be found here 
+## MYSQL File
+The MYSQL file is uploaded as well. It can be found here 
 
 https://github.com/SherAfsar/Data-Cleaning-in-MYSQL/blob/main/Data%20Cleaning.sql
 
