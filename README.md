@@ -1,5 +1,5 @@
 # Data-Cleaning-in-MYSQL
-This GitHub repository contains a comprehensive data cleaning project using MySQL. The project aims to prepare raw data for analysis through a series of systematic steps. Initially, the database is set up, and raw data is imported. Duplicate records are identified and removed using row numbers and Common Table Expressions (CTEs).The data is then standardized: leading blank spaces in the company column are removed, values in the industry and country columns are corrected, and the date column is converted from text to a proper date format. Null and blank values are addressed by replacing blanks with nulls and filling missing industry values based on matching company and location information.Finally, rows with null values in critical columns are deleted, and unnecessary columns, such as the temporary row number column used for duplicate removal, are dropped. This project ensures the data is clean, consistent, and ready for further analysis or application.
+This GitHub repository contains a comprehensive Data Cleaning and Exploratory Data Analysis (EDA) project using MySQL. The project aims to prepare raw data for analysis through a series of systematic steps. Initially, the database is set up, and raw data is imported. Duplicate records are identified and removed using row numbers and Common Table Expressions (CTEs).The data is then standardized: leading blank spaces in the company column are removed, values in the industry and country columns are corrected, and the date column is converted from text to a proper date format. Null and blank values are addressed by replacing blanks with nulls and filling missing industry values based on matching company and location information.Finally, rows with null values in critical columns are deleted, and unnecessary columns, such as the temporary row number column used for duplicate removal, are dropped. This project ensures the data is clean, consistent, and ready for further analysis or application. After the data was cleaned, Exploratory Data Analysis (EDA) was performed by answering different queries. 
 
 ## Dataset
 The original dataset contains 2362 rows and includes columns such as 'Company', 'Location', 'Industry', 'Total Laid Off', 'Percentage Laid Off', 'Date', 'Stage', 'Country', and 'Funds Raised (Millions)'. After cleaning the dataset, the updated dataset cut down to 1995 rows and the number of columns remained consistent. The dataset is uploaded and can be found here:
@@ -7,9 +7,12 @@ The original dataset contains 2362 rows and includes columns such as 'Company', 
 https://github.com/SherAfsar/Data-Cleaning-in-MYSQL/blob/main/layoffs.csv
 
 ## MYSQL File
-The MYSQL file is uploaded as well. It can be found here 
+The MYSQL files are uploaded as well. It can be found here: 
 
 https://github.com/SherAfsar/Data-Cleaning-in-MYSQL/blob/main/Data%20Cleaning.sql
+
+https://github.com/SherAfsar/MYSQL-Data-Cleaning-and-EDA/blob/main/EDA.sql
+
 
 ## Data Cleaning Steps
 The following steps have been followed to clean the the dataset in MYSQL.
@@ -23,6 +26,21 @@ The following steps have been followed to clean the the dataset in MYSQL.
 - Removing null and Blank values: First, I checked the industry column for all blanks and null values. Then, I replaced all blanks with null values. Next, I identified rows where the company and location columns had similar values but the industry was missing in one row and present in another. To fill the missing industry values with the existing ones, I first checked for these scenarios using a join. After confirming the scenarios, I used an update statement to fill in the missing industry values and verified the changes specifically for the company "Airbnb". This ensured that missing industry data was accurately filled based on existing values.
 
 - Dropping unnecessary columns: First, I deleted all rows where total_laid_off and percentage_laid_off were null. Then, I dropped the row_num column that was created earlier. This cleaned up the dataset by removing incomplete records and unnecessary columns.
+
+## Exploratory Data Analysis (EDA)
+Following questions have been answered in EDA:
+
+- Find the maximum total_laid_off and min of percentage_laid_off.
+
+- calculate sum of total_laid_off for each company where sum is not null ordered in ascending order.
+
+- Determine the funds raised by each company for each month
+
+- What is the average number of layoffs per year for each company, and how does it vary by year, ordered alphabetically by company name?
+
+- How can we find the total number of layoffs for each company by month, considering only records where the month is not null?
+
+- Besides the questions mentioned here, the cleaned data was thoroughly investigated to identify various aspects. However, those details were not included as they were trivial and held no significance.
 
 ## Learning from this Project
 
