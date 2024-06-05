@@ -1,4 +1,4 @@
-# Data-Cleaning-in-MYSQL
+# MYSQL: Data Cleaning and EDA
 This GitHub repository contains a comprehensive Data Cleaning and Exploratory Data Analysis (EDA) project using MySQL. The project aims to prepare raw data for analysis through a series of systematic steps. Initially, the database is set up, and raw data is imported. Duplicate records are identified and removed using row numbers and Common Table Expressions (CTEs).The data is then standardized: leading blank spaces in the company column are removed, values in the industry and country columns are corrected, and the date column is converted from text to a proper date format. Null and blank values are addressed by replacing blanks with nulls and filling missing industry values based on matching company and location information.Finally, rows with null values in critical columns are deleted, and unnecessary columns, such as the temporary row number column used for duplicate removal, are dropped. This project ensures the data is clean, consistent, and ready for further analysis or application. After the data was cleaned, Exploratory Data Analysis (EDA) was performed by answering different queries. 
 
 ## Dataset
